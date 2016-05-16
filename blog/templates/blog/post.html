@@ -1,0 +1,7 @@
+{% extends "person/header.html"%}
+{% block content %}
+	<h3>{{post.title}}</h3>	
+	<h6>on {{post.date}}</h6>
+	{{post.body | safe | linebreaks}}	
+	<!-- safe ensures that the html-icity of the page is maintained. What it means is without safe, the blog would come as a simple text page not html-ed version. Html-ed => strong would be bold, i would mean italicized -->
+{% endblock %}

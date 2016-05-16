@@ -1,0 +1,15 @@
+{% extends "person/header.html"%}
+	{% block content %}
+		{% for post in object_list %} <!--object_list coming form models' Object -->
+		<!-- object_list contains object of Post type.-->
+			<h5>{{ post.date | date:"Y-m-d"}} <a href="/blog/{{post.id}}"> {{ post.title }}</a></h5>
+		{% endfor %}
+
+{% endblock %}
+
+
+<!-- 
+this comment is to show you the value of space
+
+Below code is same as above. But it won't run. Just because of the single <space> between <date:> and "Y-m-d". Beware. It is a tiny error but the whole code gets fucked up coz of it.
+-->
