@@ -1,0 +1,2 @@
+# first
+A simple blog
